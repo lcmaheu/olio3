@@ -1,5 +1,11 @@
 class Portfolio < ApplicationRecord
     has_many :technologies
+    # IF BLANK['NAME', DONT LET THIS PASS THROUGH.  accepts_nested_attributes_for :technologies, reject_if: lambda { |attri| attri['name'].blank?}
+    accepts_nested_attributes_for   :technologies, 
+                                    reject_if: lambda { |attri| attri['name'].blank?}
+    
+    
+    
     include Placeholder
     validates_presence_of :title, :main_image, :thumb_image, :body
     
