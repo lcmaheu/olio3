@@ -6,6 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+3.times do |topic|
+    Topic.create!(
+        title: "Topic #{topic}"
+        )
+    
+end
+
+puts "3 topics created"
+
 10.times do |blog|
    Blog.create!(
         title: "My Blog Post #{blog}",
@@ -20,8 +29,10 @@
             butt and hang jaw half open thereafter for lay 
             on arms while you're using the keyboard yet massacre 
             a bird in the living room and then look like the cutest 
-            and most innocent animal on the planet."
+            and most innocent animal on the planet.",
+           topic_id: Topic.last.id
     )
+    
 end
 
 puts "10 blog posts created"
@@ -35,10 +46,20 @@ end
 
 puts "5 skills create"
 
-9.times do |portfolio_item|
+8.times do |portfolio_item|
     Portfolio.create!(
         title: "Portfolio title: #{portfolio_item}", 
-        subtitle: "My superb service", 
+        subtitle: "Ruby on Rails", 
+        body: "The best Lorem Ipsum Generator in all the sea! Heave this scurvy copyfiller fer yar next adventure and cajol yar clients into walking the plank with ev'ry layout! Configure above, then get yer pirate ipsum...own the high seas, arg!", 
+        main_image: "http://placehold.it/600x400", 
+        thumb_image: "http://placehold.it/350x200"
+        
+    )
+end
+1.times do |portfolio_item|
+    Portfolio.create!(
+        title: "Portfolio title: #{portfolio_item}", 
+        subtitle: "Angular", 
         body: "The best Lorem Ipsum Generator in all the sea! Heave this scurvy copyfiller fer yar next adventure and cajol yar clients into walking the plank with ev'ry layout! Configure above, then get yer pirate ipsum...own the high seas, arg!", 
         main_image: "http://placehold.it/600x400", 
         thumb_image: "http://placehold.it/350x200"
@@ -47,3 +68,18 @@ puts "5 skills create"
 end
 
 puts "9 portfolio items created"
+
+# INSTEAD OF THIS LOOK BELOW 3.times do |technology|
+#     Technology.create!(
+#         name: "Technology #{technology}",
+#         portfolio_id: Portfolio.last.id
+#     )
+# end
+
+3.times do |technology|
+    Portfolio.last.technologies.create!(
+        name: "Technology #{technology}"
+    )
+end
+
+puts "3 technologies created"
