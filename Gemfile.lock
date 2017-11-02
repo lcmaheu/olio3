@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/lcmaheu/qc_dev_view_tool
+  revision: 9b92cb023765bbab0d2565b19f7abc73a7b9f9fe
+  specs:
+    qc_dev_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -202,6 +208,7 @@ DEPENDENCIES
   pg (~> 0.18)
   pry-byebug
   puma (~> 3.7)
+  qc_dev_view_tool!
   rails (~> 5.1.2)
   sass-rails (~> 5.0)
   spring
