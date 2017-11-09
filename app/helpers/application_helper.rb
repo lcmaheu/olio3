@@ -18,7 +18,7 @@ module ApplicationHelper
 
   
   def set_copyright
-    QcDevViewTool::Renderer.copyright 'QcDev', 'All rights reserved'
+    QcDevViewTool::Renderer.copyright 'Qbecode', 'All rights reserved'
   end
   
   
