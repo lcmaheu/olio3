@@ -1,5 +1,7 @@
 {
   "name": "olio3",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "sortablejs": "^1.7.0"
+  }
 }
