@@ -2,6 +2,8 @@
       <div class="album text-muted">
         <div class="container">
 
+<!--if  you want only admin to sort without save also-->
+<!--<div class="row <%= "sortable" if logged_in?(:site_admin) %>">-->
           <div class="row sortable">
             <!--<%= link_to "Create New Items", new_portfolio_url if logged_in?(:site_admin) %>-->
             <%= render partial: 'portfolio_item', collection: @portfolio_items %>
