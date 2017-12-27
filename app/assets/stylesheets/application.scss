@@ -193,3 +193,45 @@ body {
 // .contact{
 //   padding-top:0.5rem;
 // }
+
+// .about-container{
+//   background-color: #eee;
+//   width:1000px;
+//   margin: 30px auto;
+// }
+
+.about-container{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.item--2 {
+  grid-area: 1 / 2 / 2 / 4;
+}
+// .about-round{
+//   -webkit-clip-path: circle(50% at 50% 50%);
+//           clip-path: circle(50% at 50% 50%);
+// }
+
+// .about-round {
+//     -webkit-clip-path: polygon(0% 20%,
+//                                 40% 20%,
+//                                 40% 0%,
+//                                 100% 50%,
+//                                 40% 100%,
+//                                 40% 80%,
+//                                 0% 80%);
+//             clip-path: polygon(0% 20%,
+//                                 40% 20%,
+//                                 40% 0%,
+//                                 100% 50%,
+//                                 40% 100%,
+//                                 40% 80%,
+//                                 0% 80%);
+//   }
+
+.about-round {
+  clip-path: circle(40% at 50% 50%);
+  margin-top: -30px;
+  margin-left: -10px;
+}
