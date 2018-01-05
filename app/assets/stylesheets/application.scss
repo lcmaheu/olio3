@@ -111,10 +111,16 @@ body {
 
 .cover {
   padding: 0 1.5rem;
+  
+ 
 }
 .cover .btn-lg {
   padding: .75rem 1.25rem;
   font-weight: bold;
+}
+.cover-container{
+  background: rgba(155, 0, 0, 0.25);
+  // width: 100%;
 }
 
 
@@ -203,6 +209,7 @@ body {
 .about-container{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
+  background:rgba(255, 0, 0, 0.25);
 }
 
 .item--2 {
@@ -251,7 +258,8 @@ body {
   // background: image-url('kelly-sikkema-251938.jpg') no-repeat;
   // background: image-url('kobu-agency-409288.jpg') no-repeat;
   // background: image-url('laura-kranz-358339.jpg') no-repeat;
-  background: image-url('laura-kranz-361082.jpg') no-repeat;
+  // background: image-url('laura-kranz-361082.jpg') no-repeat;
+  background: image-url('722787372.png') no-repeat;
   background-size: cover;  
 }
 
