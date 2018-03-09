@@ -29,7 +29,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  
 }
 body {
   color: #fff;
@@ -111,10 +111,16 @@ body {
 
 .cover {
   padding: 0 1.5rem;
+  
+ 
 }
 .cover .btn-lg {
   padding: .75rem 1.25rem;
   font-weight: bold;
+}
+.cover-container{
+  background: rgba(155, 0, 0, 0.25);
+  // width: 100%;
 }
 
 
@@ -193,3 +199,70 @@ body {
 // .contact{
 //   padding-top:0.5rem;
 // }
+
+// .about-container{
+//   background-color: #eee;
+//   width:1000px;
+//   margin: 30px auto;
+// }
+
+.about-container{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  background:rgba(255, 0, 0, 0.25);
+}
+
+.item--2 {
+  grid-area: 1 / 2 / 2 / 4;
+}
+// .about-round{
+//   -webkit-clip-path: circle(50% at 50% 50%);
+//           clip-path: circle(50% at 50% 50%);
+// }
+
+// .about-round {
+//     -webkit-clip-path: polygon(0% 20%,
+//                                 40% 20%,
+//                                 40% 0%,
+//                                 100% 50%,
+//                                 40% 100%,
+//                                 40% 80%,
+//                                 0% 80%);
+//             clip-path: polygon(0% 20%,
+//                                 40% 20%,
+//                                 40% 0%,
+//                                 100% 50%,
+//                                 40% 100%,
+//                                 40% 80%,
+//                                 0% 80%);
+//   }
+
+.about-round {
+  clip-path: circle(40% at 50% 50%);
+  margin-top: -30px;
+  margin-left: -10px;
+}
+
+#background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  // background: image-url('william-iven-19843.jpg') no-repeat;
+  // background: image-url('kelly-sikkema-251938.jpg') no-repeat;
+  // background: image-url('kobu-agency-409288.jpg') no-repeat;
+  // background: image-url('laura-kranz-358339.jpg') no-repeat;
+  // background: image-url('laura-kranz-361082.jpg') no-repeat;
+  background: image-url('722787372.png') no-repeat;
+  background-size: cover;  
+}
+
+.app-footer {
+  color:white;
+}
