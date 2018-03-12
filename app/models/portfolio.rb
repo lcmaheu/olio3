@@ -2,6 +2,7 @@ class Portfolio < ApplicationRecord
     has_many :technologies
     # IF BLANK['NAME', DONT LET THIS PASS THROUGH.  accepts_nested_attributes_for :technologies, reject_if: lambda { |attri| attri['name'].blank?}
     accepts_nested_attributes_for   :technologies, 
+                                    allow_destroy: true,
                                     reject_if: lambda { |attri| attri['name'].blank?}
     
     
