@@ -84,7 +84,7 @@ module ApplicationHelper
   end
 
   def alert_generator msg
-    js add_gritter(msg, title: "Qbecode Portfolio", sticky: false, time: 800)
+    js add_gritter(msg, title: "Qbecode Portfolio", sticky: false, time: 1200)
   end
 
   
