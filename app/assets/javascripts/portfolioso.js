@@ -12,6 +12,9 @@ function loseFocus() {
     document.getElementById("myFocus").blur();
 }
 
+
+
+
 // var input = document.getElementById("myFocus");
 // input.addEventListener("keyup", function(event) {
 //     event.preventDefault();
