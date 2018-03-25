@@ -17,6 +17,10 @@ class BlogsController < ApplicationController
   def show
     @blog = Blog.includes(:comments).friendly.find(params[:id])
     @comment = Comment.new
+    # @comments = @blog.comments.order('created_at DESC')
+   
+    # @comments = Comment.order(created_at: :desc)
+    # @comments = Comment.newest_first
     
     @page_title = @blog.title
     @seo_keywords = @blog.body
