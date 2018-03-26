@@ -8,7 +8,11 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.page(params[:page]).per(5)
+    if logged_in?(:site_admin)
+      @blogs = Blog.recent.page(params[:page]).per(5)
+    else
+      @blogs = Blog.published.recent.page(params[:page]).per(5)
+    end
     @page_title = "My Portfolio Blog"
   end
 
@@ -17,6 +21,8 @@ class BlogsController < ApplicationController
   def show
     @blog = Blog.includes(:comments).friendly.find(params[:id])
     @comment = Comment.new
+    # @comments = @blog.comments.order(created_at: :desc)
+    # @comments = Comment.order('created_at DESC')
     # @comments = @blog.comments.order('created_at DESC')
    
     # @comments = Comment.order(created_at: :desc)
