@@ -3,13 +3,13 @@ class Blog < ApplicationRecord
     extend FriendlyId
     friendly_id :title, use: :slugged
     
-    validates_presence_of :title, :body
+    validates_presence_of :title, :body, :topic_id
     
     # def self.special_blogs
     #   all
     # end
     
-    # belongs_to :topic
+    belongs_to :topic
     
     has_many :comments, dependent: :destroy
     
