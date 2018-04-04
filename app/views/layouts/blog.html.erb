@@ -26,13 +26,18 @@
        <%= render 'shared/blog_sidebar' %>
       </div>
     
-    <%= render 'shared/blog_footer' %>
+    
     
     <%= alerts %>
-      
-    <%= render 'shared/blog_nav' %>
-      <!--<%= render "shared/nav", location: 'bottom' %>-->
-    <%= source_helper("blog") %>
+
+
+
     </div>
+    
+   <%= render 'shared/blog_nav', style: "color: purple" %>
+      <div class="container">
+        <%= render 'shared/blog_footer' %>
+      </div>
+    
   </body>
 </html>

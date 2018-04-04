@@ -87,6 +87,7 @@ h6, .h6 {
 
 .blog-header {
   padding-bottom: 1.25rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
   border-bottom: .05rem solid #eee;
 }
@@ -197,16 +198,18 @@ h6, .h6 {
 //   padding : 0.5rem;
 // }
 
-.container > .blog-nav {
-  padding-right: 0px;
-  padding-left: 0px;
-}
+// .container > .blog-nav {
+//   padding-right: 0px;
+//   padding-left: 0px;
+// }
 
 .navbar-brand {
   margin-right: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 .blog-nav {
   padding-left: 0.5rem;
-  margin-bottom: 1rem;
+  // margin-bottom: 1rem;
 }
+
